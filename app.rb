@@ -1,14 +1,14 @@
-  require 'json'
-  require 'sinatra'
-  require 'sinatra/activerecord'
+require 'json'
+require 'sinatra'
+require 'sinatra/activerecord'
+  
+require './config/database'
 
-  require './config/database'
-
-  # Load Models
-  Dir["./app/models/*.rb"].each {|file| require file }
-
-  class App < Sinatra::Base
-    get '/' do
-      'Hello world!'
-    end
+# Load Models
+Dir["./app/models/*.rb"].each {|file| require file }
+  
+class App < Sinatra::Base
+  get '/' do
+    'Hello world!'
   end
+end
